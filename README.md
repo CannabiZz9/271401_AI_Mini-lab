@@ -1,8 +1,9 @@
 # 271401_AI_Mini-lab
 AI-integrated mini-lab project for the Dobot MG400 robotic arm — built with Python + OpenCV to perform color-based object detection and pick-and-place.
 
-Overview
-This project connects a Dobot MG400 robot with a Python vision system to detect and classify colored objects (red, green, blue, yellow) using HSV color segmentation.
+Overview 
+
+  This project connects a Dobot MG400 robot with a Python vision system to detect and classify colored objects (red, green, blue, yellow) using HSV color segmentation.
 The robot performs pick and place operations based on the detected color and its position in the camera frame, using a calibrated perspective transform to convert pixel coordinates to world coordinates.
 
 Key Features
