@@ -13,7 +13,7 @@ Key Features
   5. JSON configuration file (hsv_config.json) to store HSV and morphology settings
 
 Project Structure 
-  1. Dobot_import/              # Import this folder into Dobot Studio
+  1. Dobot_import/          # Import this folder into Dobot Studio
   2. Client.py              # Main script integrating OpenCV vision and MG400 communication
   3. Setup.py               # HSV configuration and calibration tool
   4. hsv_config.json        # Saved HSV color and morphology settings
@@ -21,11 +21,11 @@ Project Structure
 
 
 Dependencies
-  1.Python 3.8+
-  2.OpenCV (cv2)
-  3.NumPy
-  4.Socket
-  5.Dobot Studio
+  1. Python 3.8+
+  2. OpenCV (cv2)
+  3. NumPy
+  4. Socket
+  5. Dobot Studio
 
 How to Run
   1. Run Setup.py to tune HSV color ranges and save hsv_config.json.
@@ -38,3 +38,18 @@ How to Run
   8. Run program in Dobot studio
   9. Run Client.py to start real-time color detection and robot control.
   10. In control panel choose what color to pick then set start bar to 1.
+
+How It Works
+  1. The user sets conditions.
+  2. Python and the Dobot MG400 establish a handshake for communication.
+  3. Python processes real-time images from the camera using OpenCV to detect color thresholds:
+    3.1 Fix distortion
+    3.2 Detect color regions
+    3.3 Apply morphology operations
+  4. Find minimum (x, y) and maximum (x, y) positions of each cube for bounding box, rotation and center(x,y) then map into world space.
+  5. The Dobot sends a request to Python asking for the cube position.
+  6. Python returns the cube coordinates in world space.
+  7. The Dobot moves to the predefined pick-up point.
+  8. The Dobot moves to the cube position.
+  9. The Dobot picks up the cube and places it in the designated area.
+  10. The Dobot returns to its home position and waits for Python’s next position update (waiting state).
