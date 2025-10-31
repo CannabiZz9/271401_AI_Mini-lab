@@ -21,11 +21,11 @@ Project Structure
 
 
 Dependencies
-  -Python 3.8+
-  -OpenCV (cv2)
-  -NumPy
-  -Socket
-  -Dobot Studio
+  1.Python 3.8+
+  2.OpenCV (cv2)
+  3.NumPy
+  4.Socket
+  5.Dobot Studio
 
 How to Run
   1. Run Setup.py to tune HSV color ranges and save hsv_config.json.
