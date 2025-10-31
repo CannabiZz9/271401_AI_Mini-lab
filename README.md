@@ -44,13 +44,15 @@ How It Works
   1. The user sets conditions.
   2. Python and the Dobot MG400 establish a handshake for communication.
   3. Python processes real-time images from the camera using OpenCV to detect color thresholds:
+  
     3.1 Fix distortion
     3.2 Detect color regions
     3.3 Apply morphology operations
-  4. Find minimum (x, y) and maximum (x, y) positions of each cube for bounding box, rotation and center(x,y) then map into world space.
-  5. The Dobot sends a request to Python asking for the cube position.
-  6. Python returns the cube coordinates in world space.
-  7. The Dobot moves to the predefined pick-up point.
-  8. The Dobot moves to the cube position.
-  9. The Dobot picks up the cube and places it in the designated area.
-  10. The Dobot returns to its home position and waits for Python’s next position update (waiting state).
+     
+  5. Find minimum (x, y) and maximum (x, y) positions of each cube for bounding box, rotation and center(x,y) then map into world space.
+  6. The Dobot sends a request to Python asking for the cube position.
+  7. Python returns the cube coordinates in world space.
+  8. The Dobot moves to the predefined pick-up point.
+  9. The Dobot moves to the cube position.
+  10. The Dobot picks up the cube and places it in the designated area.
+  11. The Dobot returns to its home position and waits for Python’s next position update (waiting state).
