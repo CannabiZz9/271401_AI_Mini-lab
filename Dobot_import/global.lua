@@ -1,0 +1,13 @@
+check = ''
+check_begin = ''
+test = ''
+data_check = ''
+position = ''
+count = 0
+Z_keep = 0
+X_keep = 0
+Y_keep = 0
+x = 0
+y = 0
+R = 0
+position_Tool = 0 
