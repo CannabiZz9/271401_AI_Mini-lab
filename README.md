@@ -6,18 +6,19 @@ This project connects a Dobot MG400 robot with a Python vision system to detect 
 The robot performs pick and place operations based on the detected color and its position in the camera frame, using a calibrated perspective transform to convert pixel coordinates to world coordinates.
 
 Key Features
-  -OpenCV-based vision for real-time color detection and contour tracking after morphology process. 
-  -HSV configuration interface with trackbars for live tuning (Setup.py)
-  -Dobot MG400 control via TCP/IP client (Client.py)
-  -Perspective calibration for accurate pixel-to-robot coordinate mapping
-  -JSON configuration file (hsv_config.json) to store HSV and morphology settings
+  1. OpenCV-based vision for real-time color detection and contour tracking after morphology process. 
+  2. HSV configuration interface with trackbars for live tuning (Setup.py)
+  3. Dobot MG400 control via TCP/IP client (Client.py)
+  4. Perspective calibration for accurate pixel-to-robot coordinate mapping
+  5. JSON configuration file (hsv_config.json) to store HSV and morphology settings
 
-Project Structure
-├── Dobot_import     # Import this folder into Dobot Studio
-├── Client.py        # Main script integrating OpenCV vision and MG400 communication
-├── Setup.py         # HSV configuration and calibration tool
-├── hsv_config.json  # Saved HSV color and morphology settings
-└── README.md        # (This file)
+Project Structure 
+  1. Dobot_import/              # Import this folder into Dobot Studio
+  2. Client.py              # Main script integrating OpenCV vision and MG400 communication
+  3. Setup.py               # HSV configuration and calibration tool
+  4. hsv_config.json        # Saved HSV color and morphology settings
+  5. README.md              # (This file)
+
 
 Dependencies
   -Python 3.8+
